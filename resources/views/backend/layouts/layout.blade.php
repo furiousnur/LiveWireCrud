@@ -21,6 +21,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Main CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/main.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/toastr.min.css')}}">
+{{--    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">--}}
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css"
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -41,9 +43,24 @@
 <script src="{{asset('assets/js/plugins/pace.min.js')}}"></script>
 <!-- Page specific javascripts-->
 <script type="text/javascript" src="{{asset('assets/js/plugins/chart.js')}}"></script>
+<script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+
+{{--<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>--}}
+
+{!! Toastr::message() !!}
 <!-- Google analytics script-->
 @stack('script')
 <script type="text/javascript">
+
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            toastr.error('{{$error}}', 'Error', {
+                closeButton:true,
+                progressBar:true,
+            });
+        @endforeach
+    @endif
+
     var data = {
         labels: ["January", "February", "March", "April", "May"],
         datasets: [

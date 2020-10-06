@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\Backend\DashboardController;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +20,7 @@ Route::view('users','livewire.home');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::middleware('auth')->group(function () {
     Route::resource('dashboard', DashboardController::class);

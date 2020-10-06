@@ -9,6 +9,7 @@
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/toastr.min.css')}}">
 </head>
 <body>
 <section class="material-half-bg">
@@ -24,11 +25,13 @@
             <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>SIGN IN</h3>
             <div class="form-group">
                 <label class="control-label">Email</label>
-                <input class="form-control" type="text" name="email" placeholder="Email" autofocus>
+                <input class="form-control" type="text" id="email" name="email" placeholder="Email" autofocus>
+
             </div>
             <div class="form-group">
                 <label class="control-label">PASSWORD</label>
-                <input class="form-control" type="password" name="password" placeholder="Password">
+                <input class="form-control" type="password" id="password"  name="password" placeholder="Password">
+
             </div>
             <div class="form-group">
                 <div class="utility">
@@ -52,8 +55,20 @@
 <script src="{{asset('assets/js/main.js')}}"></script>
 <!-- The javascript plugin to display page loading on top-->
 <script src="{{asset('assets/js/plugins/pace.min.js')}}"></script>
+
+<script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+{!! Toastr::message() !!}
+
 <!-- Page specific javascripts-->
 <script type="text/javascript">
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            toastr.error('{{$error}}', 'Error', {
+                closeButton:true,
+                progressBar:true,
+            });
+        @endforeach
+    @endif
     // Login Page Flipbox control
     $('.login-content [data-toggle="flip"]').click(function() {
         $('.login-box').toggleClass('flipped');
