@@ -24,10 +24,14 @@
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css"
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    @stack('css')
 </head>
 <body class="app sidebar-mini">
+
+@include('backend.layouts.header')
 @include('backend.layouts.sidebar')
 @yield('content')
+
 <!-- Essential javascripts for application to work-->
 <script src="{{asset('assets/js/jquery-3.3.1.min.js')}}"></script>
 <script src="{{asset('assets/js/popper.min.js')}}"></script>
@@ -38,7 +42,7 @@
 <!-- Page specific javascripts-->
 <script type="text/javascript" src="{{asset('assets/js/plugins/chart.js')}}"></script>
 <!-- Google analytics script-->
-
+@stack('script')
 <script type="text/javascript">
     var data = {
         labels: ["January", "February", "March", "April", "May"],

@@ -1,22 +1,15 @@
 <?php
 
+use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\Backend\DashboardController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('login');
+})->name('home-login');
+
+//Route::get('logout', AuthenticationController::class);
+Route::resource('registration', AuthenticationController::class);
 
 //Livewire Route
 Route::view('users','livewire.home');
@@ -27,9 +20,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
-/*Route::middleware('auth')->namespace('Backend')->prefix('backend')->group(function () {
+Route::middleware('auth')->group(function () {
     Route::resource('dashboard', DashboardController::class);
-});*/
+});
 
-Route::resource('dashboard', DashboardController::class);
+
+//Route::resource('dashboard', DashboardController::class);
