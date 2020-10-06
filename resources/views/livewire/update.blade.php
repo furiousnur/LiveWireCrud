@@ -10,6 +10,13 @@
         <input type="email" class="form-control" wire:model="email" id="exampleFormControlInput2" placeholder="Enter Email">
         @error('email') <span class="text-danger">{{ $message }}</span>@enderror
     </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlInput2">Password</label>
+        <input type="password" class="form-control" id="exampleFormControlInput3" wire:model="password" placeholder="Enter Password">
+        @error('password') <span class="text-danger">{{ $message }}</span>@enderror
+    </div>
+
     <button wire:click.prevent="update()" class="btn btn-dark">Update</button>
     <button wire:click.prevent="cancel()" class="btn btn-danger">Cancel</button>
 </form>

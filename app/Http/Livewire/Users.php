@@ -40,7 +40,7 @@ class Users extends Component
         $this->user_id = $id;
         $this->name = $user->name;
         $this->email = $user->email;
-//        $this->email = $user->email;
+        $this->password = $user->password;
     }
 
     public function cancel()

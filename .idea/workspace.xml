@@ -1,15 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabc137e-2286-4022-8d40-63c52c118b5b" name="Default Changelist" comment="" />
+    <list default="true" id="fabc137e-2286-4022-8d40-63c52c118b5b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/assets/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery-3.3.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/plugins/bootstrap-datepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/plugins/bootstrap-notify.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/plugins/chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/plugins/dataTables.bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/plugins/dropzone.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/plugins/fullcalendar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/plugins/jquery-ui.custom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/plugins/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/plugins/jquery.vmap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/plugins/jquery.vmap.sampledata.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/plugins/jquery.vmap.world.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/plugins/moment.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/plugins/pace.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/plugins/select2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/plugins/sweetalert.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/popper.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/update.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -131,13 +177,25 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -153,14 +211,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601921131727</updated>
-      <workItem from="1601921132864" duration="1374000" />
+      <workItem from="1601921132864" duration="2684000" />
+      <workItem from="1601991757141" duration="2972000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="519" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601992225757">
+      <screen x="0" y="27" width="1848" height="1053" />
+    </state>
+    <state x="519" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1848.1053@0.27.1848.1053" timestamp="1601992225757" />
+    <state x="707" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601922571784">
+      <screen x="0" y="27" width="1848" height="1053" />
+    </state>
+    <state x="707" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1848.1053@0.27.1848.1053" timestamp="1601922571784" />
     <state x="679" y="257" width="479" height="600" key="NewPhpClassDialog" timestamp="1601921777298">
       <screen x="0" y="27" width="1848" height="1053" />
     </state>
