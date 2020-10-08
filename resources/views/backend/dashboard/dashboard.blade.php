@@ -7,7 +7,21 @@
     <div class="app-title">
         <div>
             <h1><i class="fa fa-dashboard"></i> Dashboard</h1>
-            <p>A free and open source Bootstrap 4 admin template</p>
+            @if(auth()->id()==7)
+                @forelse($notifications as $notification)
+                    <div class="alert alert-success" role="alert">
+                        {{$notification->created_at}} User {{$notification->name}}
+                        <a href="#" class="float-right mark-as-read" data-id="{{$notification->id}}">Mark as Read.</a>
+                    </div>
+                    @if($loop->last)
+                        <a href="#" id="mark-all">Mark all as read.</a>
+                    @endif
+                @empty
+                    <p>There are no new notifications.</p>
+                @endforelse
+            @else
+                <p>Welcome you are logged in.</p>
+            @endif
         </div>
         <ul class="app-breadcrumb breadcrumb">
             <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
@@ -68,3 +82,18 @@
     </div>
 </main>
 @endsection
+@push('script')
+    @if(auth()->id()==7)
+        {{--<script>
+            function sendMarkRequest(id=null){
+                return $.ajax("{{route('admin.markNotification')}}",{
+                   method:'POST',
+                    data:{
+                       _token,
+                        id
+                    }
+                });
+            }
+        </script>--}}
+    @endif
+@endpush

@@ -9,7 +9,17 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('backend.dashboard.dashboard');
+        $notifications = auth()->user()->unreadNotifications();
+        return view('backend.dashboard.dashboard',compact('notifications'));
+    }
+
+    public function markNotification(Request $request){
+        auth()->user()
+            ->unreadNotifications
+            ->when($request->input('id'),function ($query) use ($request){
+               return $query->where('id', $request->input('id'));
+            });
+        return response()->noContent();
     }
 
     /**
