@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Livewire\Form;
 use App\Http\Livewire\Members;
 use Illuminate\Support\Facades\Route;
 
@@ -15,9 +16,6 @@ Route::resource('registration', AuthenticationController::class);
 
 //Livewire Route
 Route::view('users','livewire.home');
-//Route::get('/members', Members::class);
-
-//Route::view('users',\App\Http\Livewire\Users::class);
 
 Auth::routes(['login' => false]);
 Auth::routes();

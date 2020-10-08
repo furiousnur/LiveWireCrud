@@ -45,11 +45,16 @@
 <script type="text/javascript" src="{{asset('assets/js/plugins/chart.js')}}"></script>
 <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
 
-{{--<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>--}}
+<!-- Data table plugin-->
+<script type="text/javascript" src="{{asset('assets/js/plugins/jquery.dataTables.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/js/plugins/dataTables.bootstrap.min.js')}}"></script>
 
 {!! Toastr::message() !!}
 <!-- Google analytics script-->
 @stack('script')
+<script type="text/javascript">
+    $('#sampleTable').DataTable();
+</script>
 <script type="text/javascript">
 
     @if ($errors->any())
