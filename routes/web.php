@@ -3,13 +3,16 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\MemberController;
 use App\Http\Livewire\Form;
 use App\Http\Livewire\Members;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('login');
 })->name('home-login');
+
 
 //Route::get('logout', AuthenticationController::class);
 Route::resource('registration', AuthenticationController::class);
@@ -25,11 +28,12 @@ Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::middleware('auth')->group(function () {
     Route::resource('dashboard', DashboardController::class);
+    Route::resource('member', MemberController::class);
 });
 
-Route::group([ 'middleware' => 'auth' ], function() {
+/*Route::group([ 'middleware' => 'auth' ], function() {
     Route::get('member', [Members::class, 'member'])->name('admin.member');
-}) ;
+}) ;*/
 
 
 

@@ -16,7 +16,7 @@
             </a>
         </li>
         <li>
-            <a class="app-menu__item active" href="{{route('admin.member')}}">
+            <a class="app-menu__item active" href="{{route('member.index')}}">
                 <i class="app-menu__icon fa fa-dashboard"></i>
                 <span class="app-menu__label">Member</span>
             </a>

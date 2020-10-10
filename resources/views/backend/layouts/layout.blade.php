@@ -27,6 +27,7 @@
     <link rel="stylesheet" type="text/css"
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     @stack('css')
+    @livewireStyles
 </head>
 <body class="app sidebar-mini">
 
@@ -52,6 +53,12 @@
 {!! Toastr::message() !!}
 <!-- Google analytics script-->
 @stack('script')
+@livewireScripts
+<script>
+    window.livewire.on('memberAdded',()=>{
+        $('#memberModal').modal('hide');
+    })
+</script>
 <script type="text/javascript">
     $('#sampleTable').DataTable();
 </script>
