@@ -40,6 +40,7 @@
                                         <td>{{$index+1}}</td>
                                         <td>{{$member->name}}</td>
                                         <td>{{$member->email}}</td>
+                                        <td>{{$member->phone}}</td>
                                         <td>{{$member->address}}</td>
                                         <td>{{$member->description}}</td>
                                     </tr>

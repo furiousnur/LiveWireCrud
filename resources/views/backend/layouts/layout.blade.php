@@ -31,24 +31,15 @@
 </head>
 <body class="app sidebar-mini">
 
-@include('backend.layouts.header')
-@include('backend.layouts.sidebar')
-@yield('content')
+    <div id="app">
+        @include('backend.layouts.header')
+        @include('backend.layouts.sidebar')
+        @yield('content')
+    </div>
 
-<!-- Essential javascripts for application to work-->
-<script src="{{asset('assets/js/jquery-3.3.1.min.js')}}"></script>
-<script src="{{asset('assets/js/popper.min.js')}}"></script>
-<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('assets/js/main.js')}}"></script>
-<!-- The javascript plugin to display page loading on top-->
-<script src="{{asset('assets/js/plugins/pace.min.js')}}"></script>
-<!-- Page specific javascripts-->
-<script type="text/javascript" src="{{asset('assets/js/plugins/chart.js')}}"></script>
+<script src="{{mix('js/app.js')}}"></script>
+<script src="{{mix('js/main.js')}}"></script>
 <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
-
-<!-- Data table plugin-->
-<script type="text/javascript" src="{{asset('assets/js/plugins/jquery.dataTables.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/js/plugins/dataTables.bootstrap.min.js')}}"></script>
 
 {!! Toastr::message() !!}
 <!-- Google analytics script-->

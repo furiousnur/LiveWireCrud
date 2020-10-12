@@ -12,33 +12,33 @@
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Name:</label>
+                        <label class="col-form-label">Name:</label>
                         <input type="text" name="name" wire:model="name" class="form-control" placeholder="Name">
                     </div>
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Email:</label>
+                        <label class="col-form-label">Email:</label>
                         <input type="email" name="email" wire:model="email" class="form-control" placeholder="Email">
                         {{--@error('email')
                         <p class="text-danger">{{$message}}</p>
                         @enderror--}}
                     </div>
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Phone:</label>
-                        <input type="text" class="form-control" wire:model="phone" name="phone" placeholder="Phone Number" id="recipient-name">
+                        <label class="col-form-label">Phone:</label>
+                        <input type="text" class="form-control" wire:model="phone" name="phone" placeholder="Phone Number">
                     </div>
                     <div class="form-group">
-                        <label for="recipient-name" wire:model="address" class="col-form-label">Address:</label>
-                        <input type="text" class="form-control" name="address" placeholder="Address here....." wire:model="address" id="recipient-name">
+                        <label class="col-form-label">Address:</label>
+                        <input type="text" class="form-control" name="address" placeholder="Address here....." wire:model="address">
                     </div>
                     <div class="form-group">
-                        <label for="message-text" class="col-form-label">Description:</label>
-                        <textarea class="form-control" placeholder="Description" wire:mode="description" name="description" id="message-text"></textarea>
+                        <label class="col-form-label">Description:</label>
+                        <textarea class="form-control" placeholder="Description" wire:model="description" name="description" id="message-text"></textarea>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" wire:click.prevent="store()" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-primary" wire:click.prevent="store">Submit</button>
             </div>
         </div>
     </div>
