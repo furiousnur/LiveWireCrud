@@ -19,7 +19,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="{{mix('css/main.css')}}">
+
     @stack('css')
     @livewireStyles
 </head>
@@ -31,7 +33,7 @@
         @yield('content')
     </div>
 
-<script src="{{mix('js/app.js')}}"></script>
+{{--<script src="{{mix('js/app.js')}}"></script>--}}
 <script src="{{mix('js/main.js')}}"></script>
 
 {!! Toastr::message() !!}
@@ -41,6 +43,10 @@
 <script>
     window.livewire.on('memberAdded',()=>{
         $('#memberModal').modal('hide');
+    })
+
+    window.livewire.on('memberUpdated',()=>{
+        $('#memberUpdateModal').modal('hide');
     })
 </script>
 <script type="text/javascript">

@@ -1,18 +1,8 @@
 <div>
-<main class="app-content">
-    <div class="app-title">
-        <div>
-            <h1><i class="fa fa-dashboard"></i> Member</h1>
-        </div>
-        <ul class="app-breadcrumb breadcrumb">
-            <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-            <li class="breadcrumb-item"><a href="#">Member</a></li>
-        </ul>
-    </div>
     <div class="row">
         <div class="col-md-12">
             <div class="tile">
-                <button class="btn btn-primary pull pull-right" data-toggle="modal" data-target="#memberModal" {{--wire:click.prevent="create()"--}}>Add Member</button>
+                <button class="btn btn-primary pull pull-right" data-toggle="modal" data-target="#memberModal">Add Member</button>
                 <h3 class="tile-title">Member List</h3>
                 @if(session()->has('message'))
                     <div class="alert alert-success">
@@ -43,6 +33,11 @@
                                         <td>{{$member->phone}}</td>
                                         <td>{{$member->address}}</td>
                                         <td>{{$member->description}}</td>
+                                        <td>
+                                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#memberUpdateModal" wire:click.prevent="edit({{$member->id}})">
+                                                Edit
+                                            </button>
+                                        </td>
                                     </tr>
                                 @empty
 {{--                                    <h4>No Data Found!!</h4>--}}
@@ -54,7 +49,6 @@
             </div>
         </div>
     </div>
-</main>
-@include('backend.member.create')
-
+    @include('backend.member.create')
+    @include('backend.member.update')
 </div>

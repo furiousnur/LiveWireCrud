@@ -1,16 +1,17 @@
 
 {{--    Add Member Modal--}}
-<div wire:ignore.self class="modal fade" id="memberModal" tabindex="-1" role="dialog" aria-labelledby="memberModalLabel" aria-hidden="true">
+<div wire:ignore.self class="modal fade" id="memberUpdateModal" tabindex="-1" role="dialog" aria-labelledby="memberUpdateModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="memberModalLabel">Add New Member</h5>
+                <h5 class="modal-title" id="memberUpdateModalLabel">Update Member</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <form>
+                    <input type="hidden" name="id" wire:model="ids">
                     <div class="form-group">
                         <label class="col-form-label">Name:</label>
                         <input type="text" name="name" wire:model="name" class="form-control" placeholder="Name">
@@ -38,7 +39,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" wire:click.prevent="store">Submit</button>
+                <button type="button" class="btn btn-primary" wire:click.prevent="update">Submit</button>
             </div>
         </div>
     </div>
