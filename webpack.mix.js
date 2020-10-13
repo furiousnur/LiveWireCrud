@@ -16,6 +16,13 @@ mix.js('resources/js/app.js', 'public/js')
 
 
 
+mix.styles([
+    "public/assets/css/main.css",
+    "public/assets/toastr.min.css",
+    "public/assets/fontawesome.min.css",
+], 'public/css/main.css');
+
+
 mix.babel([
     "public/assets/js/jquery-3.3.1.min.js",
     "public/assets/js/popper.min.js",
@@ -24,4 +31,5 @@ mix.babel([
     "public/assets/js/plugins/chart.js",
     "public/assets/js/plugins/jquery.dataTables.min.js",
     "public/assets/js/plugins/dataTables.bootstrap.min.js",
+    "public/assets/toastr.min.js",
 ], 'public/js/main.js');
