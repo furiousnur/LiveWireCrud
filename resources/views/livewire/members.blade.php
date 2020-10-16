@@ -37,6 +37,8 @@
                                             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#memberUpdateModal" wire:click.prevent="edit({{$member->id}})">
                                                 Edit
                                             </button>
+
+                                            <button type="button" class="btn btn-danger" wire:click.prevent="delete({{$member->id}})">Delete</button>
                                         </td>
                                     </tr>
                                 @empty

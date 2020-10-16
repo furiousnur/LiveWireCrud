@@ -26,12 +26,14 @@ class Members extends Component
     public function store(){
         $validateData = $this->validate([
             'name' => 'required',
-            'email' => 'required|email',
+            'email' => 'required|unique:members,email',
             'phone' => 'required|numeric',
             'address' => 'required|string',
             'description' => 'required'
         ]);
-        Member::create([$validateData]);
+
+        Member::create($validateData);
+
 //        session()->flash('message', 'Member created successfully.');
         Toastr::success('Successfully member added.', 'Success');
         $this->resetInputFields();
@@ -71,6 +73,11 @@ class Members extends Component
             $this->resetInputFields();
             $this->emit('memberUpdated');
         }
+    }
+
+    public function delete($id){
+        Member::findOrFail($id)->delete();
+        Toastr::success('Successfully member deleted.', 'Success');
     }
 
     public function render()

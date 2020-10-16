@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\TasksController;
 use App\Http\Livewire\Form;
 use App\Http\Livewire\Members;
 use App\Models\User;
@@ -29,14 +30,6 @@ Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 Route::middleware('auth')->group(function () {
     Route::resource('dashboard', DashboardController::class);
     Route::resource('member', MemberController::class);
+    Route::resource('tasks', TasksController::class);
 });
 
-/*Route::group([ 'middleware' => 'auth' ], function() {
-    Route::get('member', [Members::class, 'member'])->name('admin.member');
-}) ;*/
-
-
-
-
-
-//Route::resource('dashboard', DashboardController::class);
