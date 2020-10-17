@@ -20,12 +20,15 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="tile">
-                    <a href="{{route('tasks.create')}}" class="btn btn-primary float float-right">Add Task</a>
-
+                    <a href="{{route('tasks.create')}}" class="btn btn-primary float float-right">Add Task</a> 
                     <h3 class="tile-title">Task List</h3>
                     <br>
                     <div class="tile-body">
-                        <div id='calendar'></div>
+                        <div class="row">
+                            <div class="col-md-3 offset-md-4">
+                                <div id='calendar'></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -20,13 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fabc137e-2286-4022-8d40-63c52c118b5b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/task/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/task/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/Members.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/Members.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/layouts/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/members.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/members.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/task/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/task/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +213,7 @@
       <workItem from="1602525342337" duration="5340000" />
       <workItem from="1602610148300" duration="4681000" />
       <workItem from="1602693505379" duration="635000" />
-      <workItem from="1602834406374" duration="6647000" />
+      <workItem from="1602834406374" duration="7757000" />
     </task>
     <servers />
   </component>
