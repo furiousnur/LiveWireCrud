@@ -52,7 +52,7 @@
                                         </td>
                                     </tr>
                                 @empty
---}}{{--                                    <h4>No Data Found!!</h4>--}}{{--
+                                    <h4>No Data Found!!</h4>
                                 @endforelse
                             </tbody>
                         </table>

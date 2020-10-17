@@ -27,6 +27,12 @@
                 <span class="app-menu__label">Task</span>
             </a>
         </li>
+        <li>
+            <a class="app-menu__item active" href="{{route('upload-file.index')}}">
+                <i class="app-menu__icon fa fa-dashboard"></i>
+                <span class="app-menu__label">Upload</span>
+            </a>
+        </li>
         <li class="treeview">
             <a class="app-menu__item" href="#" data-toggle="treeview">
                 <i class="app-menu__icon fa fa-laptop"></i>
