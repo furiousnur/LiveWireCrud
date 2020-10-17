@@ -5,15 +5,20 @@ namespace App\Http\Livewire;
 use App\Models\Member;
 use Brian2694\Toastr\Facades\Toastr;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Members extends Component
 {
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap';
+
     public $ids;
     public $name;
     public $email;
     public $phone;
     public $address;
     public $description;
+    public $search;
 
     public function resetInputFields(){
         $this->name = '';
@@ -82,7 +87,14 @@ class Members extends Component
 
     public function render()
     {
-        $members = Member::latest()->get();
+        $search = '%'.$this->search . '%';
+        $members = Member::where('name','LIKE',$search)
+                         ->orWhere('email','LIKE',$search)
+                         ->orWhere('phone','LIKE',$search)
+                         ->orWhere('address','LIKE',$search)
+                         ->orWhere('description','LIKE',$search)
+                         ->latest()->paginate(5);
+//        $members = Member::latest()->paginate(10);
         return view('livewire.members',compact('members'));
     }
 }
