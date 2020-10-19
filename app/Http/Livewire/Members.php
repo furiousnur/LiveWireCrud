@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Library\MemberInterface;
 use App\Models\Member;
 use Brian2694\Toastr\Facades\Toastr;
 use Livewire\Component;
@@ -11,6 +12,12 @@ class Members extends Component
 {
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
+
+    protected $repo;
+    public function mount(MemberInterface $repo)
+    {
+        $this->repo = $repo;
+    }
 
     public $ids;
     public $name;
@@ -95,6 +102,7 @@ class Members extends Component
                          ->orWhere('description','LIKE',$search)
                          ->latest()->paginate(5);
 //        $members = Member::latest()->paginate(10);
+//        $members = $this->repo->getAll();
         return view('livewire.members',compact('members'));
     }
 }

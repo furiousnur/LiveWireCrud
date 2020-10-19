@@ -2,13 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Library\MemberInterface;
 use Illuminate\Http\Request;
 
 class MemberController extends Controller
 {
+    protected $repo;
+    public function __construct(MemberInterface $repo)
+    {
+        $this->repo = $repo;
+    }
 
     public function index()
     {
+//        $members = $this->repo->getAll();
         return view('backend.member.member');
     }
 
